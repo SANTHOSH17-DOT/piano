@@ -44,7 +44,7 @@ var key = Array.from(document.querySelectorAll('.key'))
 key.forEach(k => {
     k.addEventListener('click', () => {
 
-        let keySound = new sound(`${k.classList[2]}.mp3`, parseInt(volume.textContent))
+        let keySound = new sound(`sounds/${k.classList[2]}.mp3`, parseInt(volume.textContent))
         keySound.play();
     })
 })
@@ -74,7 +74,7 @@ const keyPress = (event) => {
                     document.querySelector(`.${eventVal[key]}`).style.background = 'white';
                     document.querySelector(`.${eventVal[key]}`).style.boxShadow = ' none';
                 }, 250)
-                let keySound = new sound(`${eventVal[key]}.mp3`, parseInt(volume.textContent))
+                let keySound = new sound(`sounds/${eventVal[key]}.mp3`, parseInt(volume.textContent))
                 keySound.play();
             }
 
@@ -100,7 +100,7 @@ const keyPress = (event) => {
                     document.querySelector(`.${eventVal[key]}`).style.background = 'white';
                     document.querySelector(`.${eventVal[key]}`).style.boxShadow = ' none';
                 }, 250)
-                let keySound = new sound(`${eventVal[key]}.mp3`, parseInt(volume.textContent))
+                let keySound = new sound(`sounds/${eventVal[key]}.mp3`, parseInt(volume.textContent))
                 keySound.play();
             }
 
@@ -125,7 +125,7 @@ const keyPress = (event) => {
         if (keyPressed[key]) {
             document.querySelector(`.${eventVal[key]}`).style.background = 'black';
             setTimeout(() => { document.querySelector(`.${eventVal[key]}`).style.background = 'rgb(71, 71, 71)'; }, 250)
-            let keySound = new sound(`${eventVal[key]}.mp3`, parseInt(volume.textContent))
+            let keySound = new sound(`sounds/${eventVal[key]}.mp3`, parseInt(volume.textContent))
             keySound.play();
         }
 
