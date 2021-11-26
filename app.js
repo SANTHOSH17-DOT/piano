@@ -28,7 +28,7 @@ console.log(key);
 key.forEach(k => {
     k.addEventListener('click', () => {
         console.log(k.classList[2]);
-        let keySound = new sound(`${k.classList[2]}.mp3`)
+        let keySound = new sound(`/key-sounds/${k.classList[2]}.mp3`)
         keySound.play();
     })
 })
